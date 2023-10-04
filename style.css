@@ -1,0 +1,93 @@
+/* reset*/
+
+:root {
+    --font-principal: 'Josefin Sans';
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    width: 100hv;
+    background-color: hsl(235, 21%, 11%);
+}
+
+header {
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    height: 40vh;
+    
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 70px
+}
+
+.titulo {
+    font-size: 18px;
+    font-family: var(--font-principal);
+    color: #fff;
+    font-weight: 700px;
+
+}
+
+h1 {
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+
+
+#botao-alterar-tema {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+nav {
+    text-decoration: none;
+}
+
+
+rodape {
+    font-family: var(--font-principal);
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 0;
+
+}
+
+
+
+
+
+.texto_rodape {
+    margin-top: 250px;
+    font-size: 11px;
+    color: hsl(233, 14%, 35%);
+}
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 15px;
+     padding-bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
