@@ -16,40 +16,94 @@
   <title>Frontend Mentor | Todo app</title>
 </head>
 
-<body>
-  <header>
-
-    <div class="container">
-
-      <div class="titulo">
-        <h1>TODO</h1>
-
-      </div>
-      <button id="botao-alterar-tema"><img src="images/icon-sun.svg" alt="imagem do Sol" class="imagem-botao"></button>
-    </div>
-<nav>
-  
-    
-        items left
-    
-        All
-        Active
-        Completed
-
-  
-      Clear Complete
-</nav>
- 
+<body class="tema-dark">
+  <header class="flex-row">
+    <h1>TODO</h1>x
+    <button id="botao-alterar-tema">
+      <img src="images/icon-sun.svg" alt="imagem do Sol" class="imagem-botao" />
+    </button>
   </header>
+  <main>
+
+    <div class="add-new-item flex-row">
+      <span class="checkmark"></span>
+      <input type="text" placeholder="Creat a new todo" name="addItem" id="addItem">
+    </div>
+
+    <section class="content">
+      <ul>
+        <li class="flex-row">
+          <label class="lista-item">
+            <input type="checkbox" name="todoItem" checked>
+            <span class="checkmark"></span>
+            <span class="text"> texto 1</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+        <li class="flex-row">
+          <label class="lista-item">
+            <input type="checkbox" name="todoItem" checked>
+            <span class="checkmark"></span>
+            <span class="text"> texto 2</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+        <li class="flex-row">
+          <label class="lista-item">
+            <input type="checkbox" name="todoItem" checked>
+            <span class="checkmark"></span>
+            <span class="text"> texto 3</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+        <li class="flex-row">
+          <label class="lista-item">
+            <input type="checkbox" name="todoItem" checked>
+            <span class="checkmark"></span>
+            <span class="text"> texto 4</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+        <li class="flex-row">
+          <label class="lista-item">
+            <input type="checkbox" name="todoItem" checked>
+            <span class="checkmark"></span>
+            <span class="text"> texto 5</span>
+          </label>
+          <span class="remove"></span>
+        </li>
+    </section>
+
+
+    <section class="funcoes">
+      <div class="bottom-items flex-row"></div>
+      <div class="items-left"><span>5 items left </span></div>
+      <div class="filter flex-row"></div>
+      <label>
+        <input type="radio" name="filter" id="all" checked>
+        <span>All</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" id="active" checked>
+        <span>Active</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" id="completed" checked>
+        <span>completed</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" id="clear completed" checked>
+        <span>Clear completed</span>
+      </label>
+    </section>
+
+  </main>
+
   <rodape>
     <p class="texto_rodape"> Drag and drop to reorder list </p>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Patrick Ribeiro</a>.
-
-    </div>
-  
   </rodape>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

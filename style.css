@@ -2,62 +2,69 @@
 
 :root {
     --font-principal: 'Josefin Sans';
+    --cor-principal-body: hsl(235, 21%, 11%);
+    --color-fonte: hsl(233, 14%, 35%);
+    --color-lista: hsl(235, 24%, 19%);
+}
+
+* {
+    box-sizing: border-box;
+
 }
 
 
-* {
+html,
+body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-    max-width: 1440px;
-    width: 100hv;
-    background-color: hsl(235, 21%, 11%);
+    background: url(images/bg-desktop-dark.jpg) no-repeat;
+
+    background-size: contain;
+    background-color: var(--cor-principal-body);
+
+}
+
+header,
+main {
+    max-width: 545px;
+    margin: auto;
 }
 
 header {
-    background-image: url(images/bg-desktop-dark.jpg);
-    background-repeat: no-repeat;
-    height: 40vh;
-    
+    justify-content: space-between;
+    padding: 52px 0 11px;
 }
+
+
 
 img {
     width: 100%;
 }
 
-.container {
+.flex-row {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 70px
-}
-
-.titulo {
-    font-size: 18px;
-    font-family: var(--font-principal);
-    color: #fff;
-    font-weight: 700px;
-
+    flex-flow: row nowrap;
 }
 
 h1 {
-    letter-spacing: 5px;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 1rem;
 }
-
 
 #botao-alterar-tema {
     background: none;
     border: none;
-    cursor: pointer;
-}
-nav {
-    text-decoration: none;
+    width: 2;
 }
 
-
-rodape {
+#botao-alterar-tema rodape {
     font-family: var(--font-principal);
     text-align: center;
     font-size: 10px;
@@ -65,29 +72,120 @@ rodape {
 
 }
 
+/*lista de itens*/
+.add-new-item {
+    background: var(--color-lista);
+    height: 65px;
+    border-radius: 5px;
+    margin: 0 0 24px;
+    padding: 0 26px;
+}
 
+.add-new-item #addItem {
+    background-color: hsl(233, 14%, 35%);
+    height: 20px;
+    margin: 24px 0 0 47px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-principal);
+    font-size: 18px;
+    letter-spacing: -0.3px;
+}
 
+.add-new-item span {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--color-fonte);
+    margin: 20px 0 0 0;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
+span.checkmark:hover {
+    background: center url(images/icon-check.svg) no-repeat,
+        linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+}
 
-.texto_rodape {
-    margin-top: 250px;
-    font-size: 11px;
-    color: hsl(233, 14%, 35%);
+.content {
+    background: var(--color-lista);
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 15px 10px 0 25px;
+    min-height: 65px;
+    border-bottom: 1px solid var(--color-fonte);
+    position: relative;
+}
+
+ul li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+ul li label {
+    position: relative;
+    cursor: pointer;
+    padding: 2px 0 0 48px;
 }
 
 
-
-
-
-
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    padding: 15px;
-     padding-bottom: 0;
+.checkmark {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--color-fonte);
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.lista-item {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+
+}
+
+/* funções*/
+
+.funcoes {
+    background-color: var(--color-lista);
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    color: var(--color-fonte);
+}
+
+.funcoes span:hover {
+    color: hsl(220, 98%, 61%);
+
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+
+}
+
+
+rodape {
+    text-align:center;
+    font-family: var(--font-principal);
+    color: var(--color-fonte);
 }
