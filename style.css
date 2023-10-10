@@ -19,13 +19,13 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: var(--font-principal);
 }
 
 body {
     background: url(images/bg-desktop-dark.jpg) no-repeat;
-
-    background-size: contain;
     background-color: var(--cor-principal-body);
+    background-size: contain;
 
 }
 
@@ -44,6 +44,7 @@ header {
 
 img {
     width: 100%;
+
 }
 
 .flex-row {
@@ -77,7 +78,7 @@ h1 {
     background: var(--color-lista);
     height: 65px;
     border-radius: 5px;
-    margin: 0 0 24px;
+    margin: 0 0 30px;
     padding: 0 26px;
 }
 
@@ -103,10 +104,31 @@ h1 {
     cursor: pointer;
 }
 
-span.checkmark:hover {
+.add-new-item span:hover {
     background: center url(images/icon-check.svg) no-repeat,
         linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
 }
+
+
+ul li input[type="checkbox"]:checked~.text {
+    text-decoration: line-through;
+    color: var(--color-fonte);
+
+}
+
+ul li input[type="checkbox"]:checked~.checkmark {
+    background: center url(images/icon-check.svg) no-repeat,
+        linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+}
+
+.text {
+    color: #fff;
+    font-family: var(--font-principal);
+    font-size: 18px;
+    font-weight: 200;
+    margin: 5px 0 0 10px;
+}
+
 
 .content {
     background: var(--color-lista);
@@ -122,6 +144,7 @@ ul {
 ul li {
     padding: 15px 10px 0 25px;
     min-height: 65px;
+
     border-bottom: 1px solid var(--color-fonte);
     position: relative;
 }
@@ -139,6 +162,7 @@ ul li label {
     cursor: pointer;
     padding: 2px 0 0 48px;
 }
+
 
 
 .checkmark {
@@ -167,10 +191,46 @@ ul li label {
     align-items: center;
     gap: 35px;
     color: var(--color-fonte);
+    cursor: pointer;
+
 }
 
 .funcoes span:hover {
     color: hsl(220, 98%, 61%);
+
+}
+
+.lista-mobile {
+    background-color: var(--color-lista);
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    margin: 15px 0 20px 1px;
+    gap: 20px;
+    color: var(--color-fonte);
+
+
+
+}
+
+.nova-lista-funcao {
+    background-color: var(--color-lista);
+    border-radius: 4px;
+    width: 400px;
+    height: 50px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-fonte);
+
+}
+
+label.funcao {
+    display: flex;
+    margin: 20px 0 20px 50px;
+    padding: auto;
 
 }
 
@@ -185,7 +245,153 @@ input[type="radio"] {
 
 
 rodape {
-    text-align:center;
+    text-align: center;
     font-family: var(--font-principal);
     color: var(--color-fonte);
+}
+
+/* responsivo*/
+@media (max-width: 1550px) {
+
+    .nova-lista-funcao,
+    label.funcao,
+    .lista-mobile {
+        display: none;
+    }
+}
+
+
+
+/* responsividade tablet*/
+
+@media (max-width: 800px) {
+    body {
+        background-size: 150%;
+        background-position: top;
+
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.7rem;
+        color: #fff;
+        letter-spacing: 0.7rem;
+    }
+
+    header {
+        padding: 40px 0 0 25px;
+        margin: 0 0 20px 140px;
+
+    }
+
+    #botao-alterar-tema {
+        background: none;
+        border: none;
+        width: 2;
+        padding-right: 110px;
+    }
+
+    .add-new-item {
+        background: var(--color-lista);
+        height: 60px;
+        width: 400px;
+        padding: 0 26px;
+    }
+
+    main {
+        width: 450px;
+        margin: auto;
+        padding: 0 26px;
+    }
+
+    .funcoes {
+        display: none;
+    }
+
+    .nova-lista-funcao,
+    label.funcao,
+    .lista-mobile {
+        display: block;
+
+    }
+
+    .nova-lista-funcao {
+        background-color: var(--color-lista);
+        border-radius: 4px;
+        width: 400px;
+        height: 50px;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--color-fonte);
+
+    }
+
+    .lista-mobile {
+        background-color: var(--color-lista);
+        border-radius: 5px;
+        width: 400px;
+        height: 50px;
+        display: flex;
+        margin: 15px 0 20px 0;
+        justify-content: center;
+        padding-right: 50px;
+        color: var(--color-fonte);
+    }
+
+    .funcao span {
+        margin: 0 -30px 0 0;
+    }
+
+    .lista-mobile.fucoes #botao-alterar-tema {
+        padding: 0 120px;
+    }
+
+
+
+
+
+
+
+}
+
+
+/* responsivo mobile*/
+@media (max-width: 375px) {
+    body {
+        background-size: 220%;
+
+    }
+
+
+    header {
+        margin: 0;
+        padding-top: 10px;
+        font-size: 14px;
+
+    }
+
+    .add-new-item {
+        width: 320px;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        width: 320px;
+    }
+
+    .lista-mobile {
+        width: 320px;
+    }
+
+    .nova-lista-funcao {
+        width: 320px;
+    }
+
+    #botao-alterar-tema {
+        padding-right: 25px;
+        w
+    }
+
 }
