@@ -251,7 +251,7 @@ rodape {
 }
 
 /* responsivo*/
-@media (max-width: 1550px) {
+@media (max-width: 2300px) {
 
     .nova-lista-funcao,
     label.funcao,
