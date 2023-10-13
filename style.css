@@ -199,6 +199,7 @@ ul li label {
 
 .funcoes span:hover {
     color: hsl(220, 98%, 61%);
+    cursor: pointer;
 
 }
 
@@ -224,6 +225,7 @@ ul li label {
     align-items: center;
     justify-content: space-between;
     color: var(--color-fonte);
+    cursor: pointer;
 
 }
 
@@ -246,10 +248,9 @@ input[type="radio"] {
     cursor: pointer;
     width: 0;
     height: 0;
-
+    margin-left: 10px;
+    color:  hsl(221,62%,52%);
 }
-
-
 rodape {
     text-align: center;
     font-family: var(--font-principal);
@@ -257,7 +258,6 @@ rodape {
 }
 
 /* responsivo*/
-
 
 
 
@@ -344,10 +344,6 @@ rodape {
     .lista-mobile.fucoes #botao-alterar-tema {
         padding: 0 120px;
     }
-
-
-
-
 
 
 
